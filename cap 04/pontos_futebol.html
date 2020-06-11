@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script> 
+    
+    var calculaPontos = function(vitorias, empates, derrotas) {
+        return ((vitorias * 3) + empates) - derrotas;
+    };
+
+    var pulaLinha = function() {
+        document.write("<br>");
+    };
+
+    var mostra = function(frase) {
+        document.write(frase);
+        pulaLinha();
+    };
+    //time da casa:
+    var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?"); // porque não é preciso usar o parseInt no primeiro número recebido??
+    var empates = parseInt(prompt("Quantos jogos o CDC Futebol Clube empatou?"));
+    var derrotas = parseInt(prompt("Quantas jogos o CDC Futebol Clube perdeu?"))
+    //var pontos = (vitorias * 3) + parseInt(empates);
+    var pontos = calculaPontos(vitorias, empates, derrotas);
+
+    mostra("Nosso time tem " + pontos + " pontos!");
+    pulaLinha()
+
+    //time adversário:
+    var vitoriasLV = prompt("Quantos jogos o LV Futebol Clube venceu?");
+    var empatesLV = parseInt(prompt("Quantos jogos o LV Futebol Clube empatou?"));
+    var derrotasLV = parseInt(prompt("Quantos jogos o LV Futebol Clube perdeu?"));
+    //var pontosLV = (vitoriasLV * 3) + parseInt(empatesLV);
+    var pontosLV = calculaPontos(vitoriasLV, empatesLV, derrotasLV);
+
+    mostra("O time LV Futebol Clube tem " + pontosLV + " pontos!");
+
+    document.write("<hr>");
+
+    //comparação de desempenho:
+    if(pontos > pontosLV) {
+        mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+    }
+
+    if(pontos < pontosLV) {
+        mostra("Nosso time está indo PIOR que o Livros Velhos!");
+    }
+
+    if(pontos == pontosLV) {
+        mostra("Nosso time está EMPATADO com o Livros Velhos!");
+    }
+    
+</script>

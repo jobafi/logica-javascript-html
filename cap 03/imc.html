@@ -1,0 +1,100 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    //declarando as funções:
+
+    var pulaLinha = function() {
+        document.write("<br>");
+    };
+    
+    var mostra = function(frase) {
+        document.write(frase);
+        //pulaLinha();
+    };
+
+    var calculaIMC = function(alturaDoUsuario, pesoDoUsuario) {
+        var imcDoUsuario = pesoDoUsuario / (alturaDoUsuario * alturaDoUsuario);
+        return imcDoUsuario;
+    };
+
+    //var imcDoUsuario  = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+    
+    var nomeUsuario = prompt("Bom dia! Qual o seu nome?")
+        document.write("Bem-vindo, " + nomeUsuario + "!");
+        pulaLinha();
+
+    var alturaDoUsuario = prompt(nomeUsuario + ", qual a sua altura?");
+    var pesoDoUsuario = prompt("E o seu peso, " + nomeUsuario + ", qual é?");
+
+    var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+        mostra(nomeUsuario +", de acordo com os seus dados fornecidos, o seu  Índice de Massa Corporal (IMC) é " + imcDoUsuario.toFixed(2) + ".");
+        pulaLinha();
+    if(imcDoUsuario >= 18.5 && imcDoUsuario <= 35) {
+       mostra(" OK! Seu IMC está entre os dois limites.");
+    }
+
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+    //var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+        
+
+
+    //var calculaIMC = function(alturaDoUsuario, pesoDoUsuario) {
+       // var imcDoUsuario = pesoDoUsuario / (alturaDoUsuario * alturaDoUsuario);
+        // também poderia usar o Math.round() aqui, para deixar os números arredondados. 
+        // A variável ficaria assim: 
+        // var imc = Math.round(calculaIMC(altura, altura));
+        // return imcDoUsuario;
+    //};
+
+
+    // meu imc:
+
+    // var peso = 75;
+    // var altura = 1.72;
+    // var imc = calculaIMC(altura, peso);
+    // mostra("Meu IMC é " + imc.toFixed(2) + ".");
+    // mostra("Ainda estou " + (imc - 18.5).toFixed(2) + " pontos acima do limte da magreza.");
+    // mostra("E estou " + (35 - imc).toFixed(2) + " pontos distante da obesidade severa.")
+    // pulaLinha();
+
+    // imc do primo:
+
+    // var pesoDoPrimo = 83;
+    // var alturaDoPrimo = 1.76;
+    // var imcDoPrimo = calculaIMC(alturaDoPrimo, pesoDoPrimo);
+    // mostra("O IMC do meu primo é " + imcDoPrimo.toFixed(2) + ". ");
+    // mostra("Ele ainda está " + (imcDoPrimo - 18.5).toFixed(2) + " pontos acima do limite da magreza.");
+
+</script>
+    
+
+<script>
+    // rascunhos:
+    
+    //calculando meu IMC:
+    //var peso = 75;
+    //var altura = 1.72;
+    //var imc = peso / (altura * altura);
+    //mostra("Meu IMC é: " + imc.toFixed(2));
+    //pulaLinha()
+
+    // calculando o IMC do primo:
+    //var pesoDoPrimo = 83;
+    //var alturaDoPrimo = 1.76;
+    //var imcDoPrimo = pesoDoPrimo / (alturaDoPrimo * alturaDoPrimo);
+    //mostra("O iMC do meu primo é: " + imcDoPrimo.toFixed(2));
+    //pulaLinha()
+</script>

@@ -1,0 +1,21 @@
+<h3>Álcool ou Gasolina?</h3>
+
+<script>
+    var tanque = 40;
+    var caminhoComGasolina = 480;
+    var consumoDeGasolina = 480 / 40;
+    var caminhoComAlcool = 300;
+    var consumoDeAlcool = 300 / 40;
+    var precoDaGasolina = 2.90;
+    var precoDoAlcool = 2.40;
+    var precoPorKilometroGasolina = precoDaGasolina / consumoDeGasolina;
+    var precoPorKilometroAlcool = precoDoAlcool / consumoDeAlcool;
+
+    <!--outro forma de arredondar números decimais Math.round(x)-->
+
+    document.write("Consumo de Gasolina: " + Math.round(consumoDeGasolina) + " l/km.<br>");
+    document.write("Consumo de Álcool: " + consumoDeAlcool.toFixed(2) + " l/km.<br>");
+    document.write("Preço por quilômetros da Gasolina: R$ " + precoPorKilometroGasolina.toFixed(2) + "." + "<br>");
+    document.write("Preço por quilômetro do Álcool: R$ " + precoPorKilometroAlcool.toFixed(2) + ".");
+</script>
+

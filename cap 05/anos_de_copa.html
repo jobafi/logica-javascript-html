@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var mostra = function(frase) {
+        document.write(frase + "<br>");
+    }
+
+    var anoLimite = prompt("Até que ano você deseja saber se haverá Copa do Mundo?");
+
+    var anoDeCopa = 1930;
+
+    while(anoDeCopa <= anoLimite) {
+        if(anoDeCopa <= 2020) {
+            mostra("O ano de " + anoDeCopa + " teve copa");
+        anoDeCopa = anoDeCopa + 4;
+        } else {
+            mostra("O ano de " + anoDeCopa + " terá copa.");
+            anoDeCopa = anoDeCopa + 4;
+            }
+    }
+
+    if(anoLimite >= 1930) {
+        mostra("<br> Uau! Esses foram os anos que teve e os anos nos quais haverá Copa do Mundo até " + anoLimite + ".<br>");
+    }
+    
+</script>
