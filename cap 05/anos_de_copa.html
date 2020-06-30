@@ -6,18 +6,18 @@
         document.write(frase + "<br>");
     }
 
-   
-    //var anoDeCopa = 1930;
+    //var anoDeCopa = 1930; // aqui partimos de um ano fixo.
     
     // pedindo ao usuário o ano incial.
-    var anoDeCopa = prompt("A partir de que ano gostaria de saber se teve ou terá Copa do Mundo?")
+    var anoComoTexto = prompt("A partir de que ano gostaria de saber se teve ou terá Copa do Mundo?")
+    var anoDeCopa = parseInt(anoComoTexto)
 
     var anoLimite = prompt("Até que ano você deseja saber se haverá Copa do Mundo?");
 
     while(anoDeCopa <= anoLimite) {
         if(anoDeCopa <= 2020) {
             mostra("O ano de " + anoDeCopa + " teve copa.");
-        anoDeCopa = anoDeCopa + 4;
+            anoDeCopa = anoDeCopa + 4;
         } else {
             mostra("O ano de " + anoDeCopa + " terá copa.");
             anoDeCopa = anoDeCopa + 4;
