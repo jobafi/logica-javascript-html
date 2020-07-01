@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        var mostra = function(frase) {
+            document.write(frase + "<br>");
+        }
+
+        // var anoOlimpiada = 1896; // primeiro ano de olimpíada.
+
+        // pedindo ao usuário o ano incial.
+        var anoComoTexto = prompt("A partir de que ano gostaria de saber se teve ou terá Olimpíadas?");
+        var anoOlimpiada = parseInt(anoComoTexto);
+
+        var anoLimite = prompt("Até que ano você deseja saber se teve ou terá Olimpíadas?");
+
+        while(anoOlimpiada <= anoLimite) {
+            if(anoOlimpiada <= 2020) {
+                mostra("O ano de " + anoOlimpiada + " teve Olimpíadas.");
+                anoOlimpiada = anoOlimpiada + 4;
+            } else {
+                mostra("O ano de " + anoOlimpiada + " terá Olimpíadas.");
+                anoOlimpiada = anoOlimpiada + 4;
+            }
+        }
+
+        if(anoLimite >= anoLimite) {
+            mostra("<br> Uau! Esses foram os anos em que tiveram e os anos nos quais haverá <strong>Olimpíadas</strong> até " + anoLimite + " .<br>");
+        }
+
+    </script>
+
+</body>
+</html>
