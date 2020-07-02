@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuadas</title>
+</head>
+<body>
+    
+    <script>
+        
+        var mostra = function(frase) {
+            document.write(frase + "<br>");
+        }
+        
+        var multiplicador = 1;
+
+        var numero = prompt("De qual número você deseja saber a Tabuada?")
+        
+        document.write("A <strong>Tabuado</strong> do número " + numero + " é: <br>")
+
+        while(multiplicador <= 10) {
+            mostra(numero + " vezes  " + multiplicador + "  é igual a  " + numero * multiplicador + ".");
+            multiplicador = multiplicador + 1;
+        }
+
+    </script>
+
+</body>
+</html>
